@@ -2,15 +2,17 @@ import React from 'react';
 
 import {Row,Col ,Card} from 'react-materialize';
 import './index.css';
+import { BrowserRouter as Link } from "react-router-dom";
 
-export default class PickerCard extends React.Component {
+import { withRouter } from 'react-router'
+class PickerCard extends React.Component {
 
 	constructor(props){
 		super(props)
 	}
 
 	playGame(e,Gname){
-		window.location.href = `/games/${Gname}`
+		this.props.history.push(`/games/${Gname}`)
 	}
 
 	render(){
@@ -21,7 +23,7 @@ export default class PickerCard extends React.Component {
 					  className="blue-grey darken-1 custom"
 					  textClassName="white-text"
 					  title={this.props.name}
-					  actions={[<a className="btn btn-play" key={this.props.name} onClick= {(e) => this.playGame(e,this.props.name)}>Play</a>]}
+					  actions={[<a className="btn btn-play" onClick={(e) => this.playGame(e,this.props.name)}>Play</a> ]}
 					>
 					</Card>
 				</Col>
@@ -30,3 +32,6 @@ export default class PickerCard extends React.Component {
 	}
 
 }
+
+
+export default withRouter(PickerCard)
