@@ -10,7 +10,7 @@ export default class PickerCard extends React.Component {
 	}
 
 	playGame(e,Gname){
-		window.location = `/games/${Gname}`
+		window.location.href = `/games/${Gname}`
 	}
 
 	render(){
