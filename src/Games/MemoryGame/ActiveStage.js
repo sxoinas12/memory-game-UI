@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button , CardPanel  , Row, Col} from 'react-materialize';
-import List from './List';
+import List from '../../Components/List';
 export default class ActiveStage extends React.Component{
 	
 

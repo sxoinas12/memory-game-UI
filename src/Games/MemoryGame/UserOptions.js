@@ -6,7 +6,6 @@ export default class UserOptions extends React.Component {
 	
 
 	render(){
-		console.log(this.props)
 		return(
 			<Row>
 				<Col m = {12}>

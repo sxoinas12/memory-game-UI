@@ -1,0 +1,23 @@
+.custom {
+	font-size: 20px;
+	transition: all .2s;
+	text-decoration: none;
+}
+
+.custom:hover{
+	box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.custom:active {
+}
+
+
+.btn-play {
+
+}
+
+
+.btn-play:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 1px rgba(0,0,0,.2);
+}

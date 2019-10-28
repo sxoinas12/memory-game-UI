@@ -25,6 +25,7 @@ function catchIt(err) {
 
 export default class Net{
 	constructor(){
+        this.BaseUrl = "http://memory-game-api.atlaspower.gr"
 		this.DefaultHeaders = {
 			 Accept: 'application/json',
     		'Content-Type': 'application/json',
@@ -32,12 +33,15 @@ export default class Net{
 	}
 
 	get(url){
-        return window.fetch(url)
+        let urb = this.BaseUrl + url
+        return window.fetch(urb)
         .then(checkIt).then((r) => r.json()).catch(catchIt);
 	}
 
 	post(url,body,headers = this.DefaultHeaders){
-		return window.fetch(url,{
+        let urb = this.BaseUrl + url;
+        console.log(urb)
+		return window.fetch(urb,{
 			method:"POST",
 			headers:headers,
 			body: JSON.stringify(body)

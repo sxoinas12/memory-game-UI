@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from 'react-materialize';
-import Net from '../Services/NetService';
+import Net from '../../Services/NetService';
 import UserOptions from './UserOptions';
 import ActiveStage from './ActiveStage';
 
@@ -29,7 +29,7 @@ export default class Game extends React.Component {
 	}
 
 	saveTurn(OpenedCards){
-		let url = 'http://localhost:3001/save'
+		let url = '/save'
 		this.NetService.post(url,{cards:this.state.cards,OpenedCards:OpenedCards})
 		.then((data) => console.log("Its saved"))
 		.catch((e) => console.log("Problem with saving turn"))
@@ -38,7 +38,7 @@ export default class Game extends React.Component {
 
 
 	StartGame(){
-		let url = 'http://localhost:3001/init'
+		let url = '/init'
 		this.NetService.post(url,{cards:this.state.playerSelection})
 		.then((data) => {
 			let cards = data.map((item) => {
@@ -96,6 +96,7 @@ export default class Game extends React.Component {
 		OpenedCards.push(cards[key]);
 		this.unFlip(key);
 		this.setState({OpenedCards})
+		console.log(OpenedCards)
 		if(this.checkWin()) {
 			this.setState({ GameMode: 2 });
 			this.saveTurn(OpenedCards);
