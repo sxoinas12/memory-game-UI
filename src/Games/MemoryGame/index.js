@@ -4,8 +4,6 @@ import Net from '../../Services/NetService';
 import UserOptions from './UserOptions';
 import ActiveStage from './ActiveStage';
 
-
-
 export default class Game extends React.Component {
 	constructor(props){
 		super(props)
@@ -96,7 +94,6 @@ export default class Game extends React.Component {
 		OpenedCards.push(cards[key]);
 		this.unFlip(key);
 		this.setState({OpenedCards})
-		console.log(OpenedCards)
 		if(this.checkWin()) {
 			this.setState({ GameMode: 2 });
 			this.saveTurn(OpenedCards);
