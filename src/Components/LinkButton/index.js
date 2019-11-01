@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 import {Button} from 'react-materialize';
-
+import './index.css'
 
 const LinkButton = (props) => {
   const {
@@ -15,7 +15,7 @@ const LinkButton = (props) => {
     ...rest
   } = props
   return (
-    <Button className=" blue"
+    <div className="nav-but"
       {...rest} // `children` is just another prop!
       onClick={(event) => {
         onClick && onClick(event)

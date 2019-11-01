@@ -1,7 +1,22 @@
+.card-size{
+	border-radius: 10px;
+}
+
 .custom {
 	font-size: 20px;
 	transition: all .2s;
 	text-decoration: none;
+	border-radius: 3px;
+}
+
+
+.custom .card-content {
+	background: #A4B0F5;
+}
+
+.custom .card-action {
+	background: #F4F4F8;
+
 }
 
 .custom:hover{
@@ -13,11 +28,19 @@
 
 
 .btn-play {
+	background:#FFF;
+	color:#A4B0F5;
+	border-radius: 5px;
 
 }
-
+.btn-play:hover {
+	background-color: #3281A1;
+	color:#FFF;
+}
 
 .btn-play:active{
 	transform: translateY(-1px);
 	box-shadow: 0 5px 1px rgba(0,0,0,.2);
+	background-color: #3281A1;
 }
+

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {Row,Col ,Card} from 'react-materialize';
 import './index.css';
 import { BrowserRouter as Link } from "react-router-dom";
@@ -17,8 +16,7 @@ class PickerCard extends React.Component {
 
 	render(){
 		return(
-			<Row>
-				<Col>
+				<Col s={6}  >
 					<Card
 					  className="blue-grey darken-1 custom"
 					  textClassName="white-text"
@@ -27,7 +25,7 @@ class PickerCard extends React.Component {
 					>
 					</Card>
 				</Col>
-			</Row>
+			
 			)
 	}
 

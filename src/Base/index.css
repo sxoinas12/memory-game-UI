@@ -1,0 +1,40 @@
+.main {
+    min-height: 600px;
+    background: #F4F4F8
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar {
+	background: #3281A1;
+}
+
+.navbar ul li a {
+    color: #FFF;
+    text-decoration: none;
+    line-height: 25px;
+    margin-top: 15px;
+
+}
+
+
+.navbar ul li a:hover{
+	background:none;
+	cursor: pointer;
+}
+
+.navbar ul li  a::after {
+	content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFF;
+    transition: width .3s;
+}
+
+.navbar ul li  a:hover::after {
+		width: 100%;
+}

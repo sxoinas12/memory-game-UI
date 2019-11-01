@@ -31,7 +31,9 @@ export default class GameHistory extends React.Component{
 		let url = 'http://localhost:3001/turns/'+page;
 		this.NetService.get(url)
 		.then(({data, total}) =>{
-		 this.setState({turns:data, pages: Math.ceil(total[0].count / 10) })
+		  if(total){
+		 	this.setState({turns:data, pages: Math.ceil(total[0].count / 10) })
+		  }
 		})
 
 	}
