@@ -15,7 +15,7 @@ export default class AppRouter extends React.Component{
 		return(
 			<div className="main">
 				<Router>
-					<Navbar  className="navbar"  alignLinks="right">
+					<Navbar brand={<a href="/" className="logo">Memory Games</a>} className="navbar"  alignLinks="right">
 						<NavItem>
 							<LinkButton aria-label="Menu" to='/'>Games</LinkButton>
 						</NavItem>

@@ -11,11 +11,15 @@
 
 
 .custom .card-content {
-	background: #A4B0F5;
+	background: #AACCDF;
+	display: flex;
+	justify-content: center;
 }
 
 .custom .card-action {
 	background: #F4F4F8;
+	display: flex;
+	justify-content: flex-end;
 
 }
 
@@ -29,8 +33,9 @@
 
 .btn-play {
 	background:#FFF;
-	color:#A4B0F5;
+	color:#AACCDF;
 	border-radius: 5px;
+	
 
 }
 .btn-play:hover {

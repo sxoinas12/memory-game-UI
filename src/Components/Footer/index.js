@@ -10,8 +10,7 @@ export default class FooterComp extends React.Component {
 	render(){
 		return(
 			<Footer
-			  copyrights={<div>&copy; Konstantinos Schoinas</div>}
-			 
+			  copyrights={"Copyrights @ Konstantinos Schoinas"}
 			  className="footer-main"
 			>
 			<div className="white-text">

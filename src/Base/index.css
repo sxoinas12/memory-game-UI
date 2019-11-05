@@ -3,9 +3,13 @@
     background: #F4F4F8
 }
 
-.logo {
-    display: flex;
-    justify-content: flex-start;
+.main .logo {
+    color: #F4F4F8;
+    padding-left: 10px;
+}
+
+.main .logo:hover {
+    color:black;
 }
 
 .navbar {

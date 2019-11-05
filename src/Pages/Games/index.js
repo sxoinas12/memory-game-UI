@@ -10,12 +10,18 @@ export default class Games extends React.Component{
 
 	render() {
 
-		let games = Object.keys(LibraryGames).map((key,index) => <PickerCard key={index} name={key} />)
+		let games = Object.keys(LibraryGames).map((key,index) => {
+		return (
+			<Col s={6} key={index}>			
+				<PickerCard key={index} name={key} />
+			</Col>
+			)})
+
 		return(
 			<div className="container">
-			<Row>
-				{games}
-			</Row>
+				<Row>
+					{games}
+				</Row>
 			</div>
 		)
 	}

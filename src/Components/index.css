@@ -1,0 +1,33 @@
+
+
+.mycard {
+	background: #82B1FF;
+  	perspective: 150rem;
+  	-moz-perspective:150rem;
+  	border: 0px;
+  	width: 120px;
+  	box-shadow: none;
+}
+
+.card-side {
+  background: orangered;
+  margin:auto;
+  height:80px;
+  transition: all 0.6s;
+}
+
+
+
+.card-side-active{
+  transform: rotateY(180deg);
+}
+
+.card-side-active-rerotate{
+	transform: rotateY(180deg);
+}
+
+
+.mycard .card-side-active .card-content .card-back{
+	transform: rotateY(180deg);
+}
+

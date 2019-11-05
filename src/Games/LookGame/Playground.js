@@ -38,12 +38,13 @@ export default class Playground extends React.Component{
 		let cards = this.state.cards; 
 		cards[key].isFlipped = true;
 		this.forceUpdate();	
-		this.checkPair(key,cards[key])
+		setTimeout(() => {
+			this.checkPair(key,cards[key])
 
-		if(this.checkWin()){
-			console.log("Do i ever come")
-			this.props.GameWin(1)
-		}
+			if(this.checkWin()){
+				console.log("Do i ever come")
+				this.props.GameWin(1)
+			}},700)
 	}
 
 	checkWin(){
